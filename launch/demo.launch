@@ -15,7 +15,7 @@
 	pkg="rosbag"
 	name="record"
 	type="record"
-	args="-a -x /camera/(.*) --duration=$(arg secs) -O $(find walkerbot)/results/turtlebotRecord.bag"
+	args="-a -x /camera/(.*) --duration=$(arg secs) -O $(find walkerbot)/results/walkerRecord.bag"
         if="$(arg record)"
      />
 
