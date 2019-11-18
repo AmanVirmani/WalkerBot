@@ -83,5 +83,4 @@ class WalkerBot {
    */
   void run();
 };
-
 #endif  // INCLUDE_WALKER_WALKER_H_

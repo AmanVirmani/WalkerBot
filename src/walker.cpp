@@ -43,7 +43,7 @@ WalkerBot::WalkerBot() {
   proximityThresh = 0.8;
 
   /// obstacle present is false by default
-  //obstaclePresent = false;
+  obstaclePresent = false;
 
   /// Publish the velocity
   publishVelocity = nh.advertise <geometry_msgs::Twist>
@@ -79,7 +79,7 @@ WalkerBot::~WalkerBot() {
 
 /**
  * @brief      Callback for the laser scan data
- * @param      data, data value of laser scan output
+ * @param      msg, data value of laser scan output
  */
 void WalkerBot::laserCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
   for (int i = 0; i < msg->ranges.size(); ++i) {
@@ -96,7 +96,6 @@ void WalkerBot::laserCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
  * @return     of type bool return when obstacle is detected
  */
 bool WalkerBot::isObstaclePresent() {
-  obstaclePresent = false;
   return obstaclePresent;
 }
 
